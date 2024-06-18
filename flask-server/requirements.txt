@@ -1,0 +1,11 @@
+elasticsearch
+warnings
+bs4
+requests
+flask
+re
+scipy==1.12
+gensim==4.3.2
+numpy
+urllib
+hashlib
