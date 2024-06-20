@@ -1,14 +1,16 @@
 import React from "react"
+import WebTrekLogoFont from '../assets/webtrek-font.png'
+import BackgroundImage from '../assets/background-image.png'
 
 export default function History(props = null) { 
     return (
         <div className="History-Fullpage">
             <div className="background-image">
-                <img src="/static/background-image.png" alt="" srcset="" />
+                <img src={BackgroundImage} alt="" srcset="" />
             </div>
             <div className="header">
                 <h1>
-                    <a href="{{ url_for('index') }}"><img src="/static/webtrek-font.png" alt="" srcset="" className="webtrek-font" /></a>
+                    <a href="{{ url_for('index') }}"><img src={WebTrekLogoFont} alt="" srcset="" className="webtrek-font" /></a>
                 </h1>
             </div>
             <div className="button-2-container">
