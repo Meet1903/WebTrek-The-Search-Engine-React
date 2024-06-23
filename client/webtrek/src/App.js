@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css';
 import BackgroundVideo from './components/Backgroundvideo';
 import WebtrekLogo from './assets/webtrek-logo.png';
-import Nevigation from './components/Navigation'
+import Navigation from './components/Navigation'
 
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
       <BackgroundVideo />
 
       <div className="button-1-container">
-          <Nevigation />
+          <Navigation />
       </div>
       <div className="flex-container">
           <div className="header">
