@@ -1,22 +1,21 @@
 import React from "react"
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import WebTrekLogoFont from '../assets/webtrek-font.png'
 import BackgroundImage from '../assets/background-image.png'
 
 export default function History(props = null) { 
     return (
-        <div className="History-Fullpage">
+        <div className="full-page-component">
             <div className="background-image">
                 <img src={BackgroundImage} alt="" srcset="" />
             </div>
             <div className="header">
                 <h1>
-                    {/* Need Nevigation support here */}
-                    <a href="{{ url_for('index') }}"><img src={WebTrekLogoFont} alt="" srcset="" className="webtrek-font" /></a>
+                    <Link to='/'><img src={WebTrekLogoFont} alt="" srcset="" className="webtrek-font" /></Link>
                 </h1>
             </div>
             <div className="button-2-container">
-                {/* Need Nevigation support here */}
-                <a href="{{ url_for('index') }}"><button className="button-2">Back to Search Engine</button></a>
+                <Link to='/'><button className="button-2">Back to Search Engine</button></Link>
                 <form method="post">
                     <button type="submit" className="button-2">Clean History</button>
                 </form>
