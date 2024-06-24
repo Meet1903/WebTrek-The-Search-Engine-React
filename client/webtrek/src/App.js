@@ -4,6 +4,7 @@ import './App.css';
 import BackgroundVideo from './components/Backgroundvideo';
 import WebtrekLogo from './assets/webtrek-logo.png';
 import Navigation from './components/Navigation'
+import { Link } from 'react-router-dom';
 
 
 export default function App() {
@@ -28,7 +29,7 @@ export default function App() {
       <div className="flex-container">
           <div className="header">
               <h1>
-                  <a href="{{ url_for('index') }}" className="title-name"><img src={WebtrekLogo} alt="" className="webtrek-logo" /></a>
+                  <Link to='/'><img src={WebtrekLogo} alt="" className="webtrek-logo" /></Link>
               </h1>
           </div>
           <div className="search-box">
