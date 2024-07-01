@@ -1,5 +1,17 @@
 # Web Trek - The Search Engine (React.js) [On going effort]
 
+On going effort: Converting simple HTML application into React App
+
+### Process completed:
+- Home page
+- History page
+
+### On going process:
+- Navigation page
+- Scrapper
+- API integration
+
+
 Welcome to WebTrek, your new search engine built with Python and powered by ElasticSearch. WebTrek combines cutting-edge technology with intuitive design to revolutionize the way you explore the vast realm of the internet.
 
 At its core, WebTrek utilizes ElasticSearch, a powerful and scalable search engine, to index and search through a vast array of web content rapidly and efficiently. Whether you're looking for articles, blog posts, product reviews, or any other type of online content, WebTrek provides lightning-fast search results tailored to your needs.
