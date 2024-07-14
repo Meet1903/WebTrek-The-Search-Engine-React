@@ -2,6 +2,8 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .header {
@@ -29,8 +31,9 @@ body, html {
 .green { color: #34a853; }
 .results-container,
 .flex-container {
-  height: 100%;
-  padding: 0;
+  /* height: 100%; */
+  padding-top: 200px;
+  padding-bottom: 50px;
   margin: 0;
   display: flex;
   align-items: center;
@@ -88,6 +91,7 @@ h2 {
 
 .results-list {
   margin-top: 20px;
+  height: 100%;
 }
 
 .result-item {
