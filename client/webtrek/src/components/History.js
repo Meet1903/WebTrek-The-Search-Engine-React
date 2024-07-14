@@ -26,9 +26,8 @@ export default function History(props = null) {
   const deleteHistory = async () => {
     try {
       console.log("Deleting history");
-      const response = await axios.post(`/history`)
-      console.log(response.data);
-      fetchHistory(currentPage);
+      await axios.post(`/history`);
+      await fetchHistory(currentPage+1);
     } catch (error) {
       console.error("Error in deleting history:", error);
     }
