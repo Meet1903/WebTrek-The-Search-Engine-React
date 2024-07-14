@@ -29,6 +29,7 @@ def search():
         insert_query_history(original_query)
     else:
         original_query = request.args.get('query')
+        insert_query_history(original_query)
     query = original_query.lower()
     clearn_query = prepare_query(query)
     ranked_result = search_on_elastic(clearn_query, page_number=current_page)
