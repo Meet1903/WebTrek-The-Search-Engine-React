@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 // import './index.css';
 import App from './App';
 import History from './components/History'
+import SearchResults from './components/SearchResults'
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     path: "history",
     element: <History />,
   },
+  {
+    path: "search",
+    element: <SearchResults />,
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
