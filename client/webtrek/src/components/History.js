@@ -27,7 +27,7 @@ export default function History(props = null) {
     try {
       console.log("Deleting history");
       await axios.post(`/history`);
-      await fetchHistory(currentPage+1);
+      setTimeout(() => {fetchHistory(currentPage+100);}, 100);
     } catch (error) {
       console.error("Error in deleting history:", error);
     }
@@ -92,8 +92,8 @@ export default function History(props = null) {
             </table>
             <div className="pagination">
               <div className="button-2-container" style={{ marginTop: '20px' }}>
-                {prevPage && <button onClick={handlePrevPage} className="button-2">Previous</button>}
-                {nextPage && <button onClick={handleNextPage} className="button-2">Next</button>}
+                {prevPage && <button onClick={handlePrevPage} className="button-2">&lt;&lt;Previous</button>}
+                {nextPage && <button onClick={handleNextPage} className="button-2">Next&gt;&gt;</button>}
               </div>
             </div>
           </>
