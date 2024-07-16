@@ -83,26 +83,25 @@ def search():
 #         results.append({'title': doc['title'], 'domain': doc['domain'], 'url': doc['url'], 'snippet': doc['summary']})
 #     return render_template('results.html', query=original_query, results=results, current_page = current_page, next_page=next_page, prev_page = prev_page)
 
-@app.route("/scrapper")
-def scrapper():
-    return render_template("scrapper.html")
-
 @app.route("/scrapper", methods=["POST"])
 def scrape():
-    if request.method == "POST":
-        domains = request.form.get("url")
-        folder = request.form.get("path")
-        domains = domains.replace(" ", "").split(",")
+    domains = request.args.get("url")
+    folder = request.args.get("path")
+    if not domains or not folder:
+        print("Missing url or path parameter")
         print(domains, folder)
-        urls = get_urls(domains)
-        print(folder)
-        save_html(urls, folder)
-        success_count = insert_data_elastic(folder)
-        delete_files_in_folder(folder)
-        if success_count:
-            return "Scraping completed successfully!"
-        else:
-            return "Scraping failed" 
+        return jsonify({"message": "Missing url or path parameter"}), 400
+    domains = domains.replace(" ", "").split(",")
+    print(domains, folder)
+    urls = get_urls(domains)
+    print(folder)
+    save_html(urls, folder)
+    success_count = insert_data_elastic(folder)
+    delete_files_in_folder(folder)
+    if success_count:
+        return jsonify({"message": "Scraping completed successfully!"})
+    else:
+        return jsonify({"message": "Scraping failed"})
         
 @app.route("/history")
 def history():
