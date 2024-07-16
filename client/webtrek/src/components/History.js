@@ -27,12 +27,12 @@ export default function History(props = null) {
     try {
       console.log("Deleting history");
       await axios.post(`/history`);
-      setTimeout(() => {fetchHistory(currentPage+100);}, 100);
+      setTimeout(() => { fetchHistory(currentPage + 100); }, 100);
     } catch (error) {
       console.error("Error in deleting history:", error);
     }
   };
-  
+
   useEffect(() => {
     fetchHistory(currentPage);
   }, [currentPage]);
