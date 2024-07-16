@@ -93,6 +93,7 @@ html {
   font-family: "JetBrains Mono", monospace;
   font-size: 22px;
   padding-left: 20px;
+  margin-right: 20px;
 }
 
 .search-button {
