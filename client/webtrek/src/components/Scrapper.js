@@ -15,6 +15,7 @@ export default function Scraper() {
         try {
             document.getElementById('loader').classList.remove('hidden');
             document.getElementById('visible-container').classList.add('hidden');
+            document.getElementById("message").innerHTML = "";
             const response = await axios.post(`/scrapper`, null, {
                 params: { url, path }
             });
@@ -22,6 +23,7 @@ export default function Scraper() {
             console.log(data);
             document.getElementById("message").innerHTML = data.message;
         } catch (error) {
+            document.getElementById("message").innerHTML = "Error scraping";
             console.error("Error scraping:", error);
         } finally {
             document.getElementById('loader').classList.add('hidden');
