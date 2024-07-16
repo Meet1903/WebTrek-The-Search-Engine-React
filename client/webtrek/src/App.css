@@ -426,3 +426,10 @@ tbody {
 .hidden {
   display: none;
 }
+
+.message {
+  font-size: 24px;
+  font-family: "JetBrains Mono", monospace;
+  text-align: center;
+  margin-top: 20px;
+}
