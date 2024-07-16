@@ -5,6 +5,7 @@ import App from './App';
 import History from './components/History'
 import SearchResults from './components/SearchResults'
 import reportWebVitals from './reportWebVitals';
+import Scrapper from './components/Scrapper'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "search",
     element: <SearchResults />,
+  },
+  {
+    path: "scrapper",
+    element: <Scrapper />,
   }
 ]);
 
