@@ -69,7 +69,7 @@ export default function SearchResults() {
                         placeholder="Search..."
                         required
                     />
-                    <input type="submit" value="Search" className="search-button" onClick={handleSearch} />
+                    <input type="submit" value="Search" className="search-button"/>
                 </form>
             </div>
             <div className='search-result-container'>
