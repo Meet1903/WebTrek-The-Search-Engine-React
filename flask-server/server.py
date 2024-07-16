@@ -53,36 +53,6 @@ def search():
         'prev_page': prev_page
     })
 
-# @app.route('/search', methods=['POST', 'GET'])
-# def search():
-#     next_page = False
-#     prev_page = False
-#     current_page = 1
-#     page = request.args.get('page')
-#     if page:
-#         current_page = int(page)
-#     if request and request.form and request.form['query']:
-#         original_query = request.form['query']
-#         insert_query_history(original_query)
-#     else:
-#         original_query = request.args.get('query')
-#     # original_query = request.form['query']
-#     query = original_query.lower()
-#     clearn_query = prepare_query(query)
-#     ranked_result = search_on_elastic(clearn_query, page_number=current_page)
-
-#     is_data_on_next_page = search_on_elastic(clearn_query, page_number=current_page + 1)
-    
-#     if is_data_on_next_page:
-#         next_page = True
-#     if current_page > 1:
-#         prev_page = True
-
-#     results = []
-#     for doc in ranked_result:
-#         results.append({'title': doc['title'], 'domain': doc['domain'], 'url': doc['url'], 'snippet': doc['summary']})
-#     return render_template('results.html', query=original_query, results=results, current_page = current_page, next_page=next_page, prev_page = prev_page)
-
 @app.route("/scrapper", methods=["POST"])
 def scrape():
     domains = request.args.get("url")
@@ -133,7 +103,6 @@ def history():
 def clean_history():
     delete_all_history()
     return "History cleaned successfully!"
-    # return render_template("history.html", history=None)
 
 @app.route("/members")
 def members():
