@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
 import WebTrekLogoFont from '../assets/webtrek-font.png';
+import BackgroundImage from '../assets/background-image.png';
 
 export default function SearchResults() {
     const [searchParams] = useSearchParams();
@@ -48,6 +49,9 @@ export default function SearchResults() {
 
     return (
         <div className='serach-container'>
+            <div className="background-image">
+                <img src={BackgroundImage} alt="" srcset="" />
+            </div>
             <div className="header">
                 <h1>
                     <a href="/" className="title-name">
